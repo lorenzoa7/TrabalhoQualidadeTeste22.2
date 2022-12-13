@@ -11,6 +11,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
+//testes1
+
 // TestaVenda, por determinar uma condição lógica, faremos um teste válido ou inválido
 public class TestaProduto {
     

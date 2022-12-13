@@ -238,4 +238,16 @@ public class ProdutoDAO extends HttpServlet {
             return false;
         }
     }
+    
+    public boolean excluirUltimo() {
+        try {
+            String sql = "DELETE FROM produtos ORDER BY id DESC LIMIT 1";
+            PreparedStatement ps = conexao.prepareStatement(sql);
+            ps.execute();
+            return true;
+        } catch( SQLException e ) {
+            System.out.println("Erro de SQL: " + e.getMessage());
+            return false;
+        }
+    }
 }

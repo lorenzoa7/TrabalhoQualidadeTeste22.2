@@ -34,6 +34,11 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 Lembrando que alguns downloads acima já incluem, em seus respectivos instaladores, opções para baixar outras ferramentas listadas, como o *WampServer* que, em sua instalação, dá a opção para instalar o *PHPMyAdmin* junto.
 
+Rodar o Mysql via docker   
+`docker run --name mysql-5-7-36-with-password -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -d mysql:5.7.36` 
+
+Acessar o Mysql e executar o script [estoque.sql](/estoque.sql)
+
 ## Rodando a aplicação
 
 #### Clonando o repositório

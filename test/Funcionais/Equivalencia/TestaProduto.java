@@ -78,7 +78,7 @@ public class TestaProduto {
         }
         
         produtodao.excluirUltimo();
-        assertTrue(validarDisponivel);
+        assertFalse(validarDisponivel);
     }
     
     // Teste para verificar se o produto está indisponível para venda caso o mesmo não esteja liberado para venda
@@ -96,7 +96,7 @@ public class TestaProduto {
         produto.setPrecoCompra(20.0);
         produto.setPrecoVenda(30.0);
         produto.setQtdDisponivel(5);
-        produto.setLiberadoVenda("N");
+        produto.setLiberadoVenda("S");
         produto.setId_categoria(1);
         produtodao.gravar(produto);
         

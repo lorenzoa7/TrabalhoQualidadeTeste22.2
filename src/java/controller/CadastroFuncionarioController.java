@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
 import model.FuncionarioDAO;
 
 @WebServlet(name = "CadastroFuncionarioController", urlPatterns = {"/CadastroFuncionarioController"})
@@ -35,7 +34,7 @@ public class CadastroFuncionarioController extends HttpServlet {
             if (dao.gravar(funcionario)) {
                 mensagem = funcionario.getPapelString() + " gravado com sucesso!";
             } else {
-                mensagem = "Erro ao gravar " + toLowerCase(funcionario.getPapelString()) + "!";
+                mensagem = "Erro ao gravar " + funcionario.getPapelString().toLowerCase() + "!";
             }
 
             request.setAttribute("mensagem", mensagem);
